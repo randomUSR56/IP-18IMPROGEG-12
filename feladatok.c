@@ -50,6 +50,7 @@ int main() {
         scanf("%d", &x);
     } while (paros(x));
     
+    //4. szemlelet
 
     //5 ket szam atlaga
     int k = 3;
