@@ -50,6 +50,14 @@ int main() {
         scanf("%d", &x);
     } while (paros(x));
     
+
+    //5 ket szam atlaga
+    int k = 3;
+    int m = 5;
+
+    float atlag = (m + k)/2;
+    printf("k es m atlaga %.1f\n", atlag);
+
     //6
     //irasd ki a szamokat 0.0-tol 1-ig tizedesevel
     for (float i = 0.0f; i < 1.0f; i += 0.1f)
