@@ -5,7 +5,7 @@ int prefixVizsgalat(){
     ++a; //+= 1
     a++;
     int b = a++ + ++a; // undefined behaviour mert nincs szekvencia pont meghatarozva, forditotol fugg melyik kerul vegrehajtasra eloszor.
-    printf("b = %d", b);
+    printf("b = %d\n", b);
     return 0;
 }
 
@@ -71,14 +71,15 @@ int szamcsere(){
     printf("add meg 'b' erteket: \n");
     scanf("%d", &b);
 
-    printf("a erteke csere elott: %d", a);
-    printf("b erteke csere elott: %d", b);
+    printf("a erteke csere elott: %d\n", a);
+    printf("b erteke csere elott: %d\n", b);
 
     a = a+b;
     b = a-b;
+    a = a-b;
 
-    printf("a erteke csere utan: %d", a);
-    printf("b erteke csere utan: %d", b);
+    printf("a erteke csere utan: %d\n", a);
+    printf("b erteke csere utan: %d\n", b);
 
     return 0;
 }
