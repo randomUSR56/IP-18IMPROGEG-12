@@ -63,6 +63,26 @@ int arithmethics(){
     return 0;
 }
 
+int szamcsere(){
+    int a = 0;
+    int b = 0;
+    printf("add meg 'a' erteket: \n");
+    scanf("%d", &a);
+    printf("add meg 'b' erteket: \n");
+    scanf("%d", &b);
+
+    printf("a erteke csere elott: %d", a);
+    printf("b erteke csere elott: %d", b);
+
+    a = a+b;
+    b = a-b;
+
+    printf("a erteke csere utan: %d", a);
+    printf("b erteke csere utan: %d", b);
+
+    return 0;
+}
+
 int main(){
     // 1. feladat
     prefixVizsgalat();
@@ -71,5 +91,7 @@ int main(){
     {
         kisbetubolNagybetu();
     }
+    // 7. feladat
+    szamcsere();
     return 0;
 }
