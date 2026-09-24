@@ -4,13 +4,8 @@ int prefixVizsgalat(){
     int a = 1;
     ++a; //+= 1
     a++;
-    int b = a++ + ++a;
-    return 0;
-
-    for (char i = 'A'; i < 'Z'; ++i)
-    {
-        printf("%c, ", i);
-    }
+    int b = a++ + ++a; // undefined behaviour mert nincs szekvencia pont meghatarozva, forditotol fugg melyik kerul vegrehajtasra eloszor.
+    printf("b = %d", b);
     return 0;
 }
 
@@ -51,7 +46,9 @@ int kisbetubolNagybetu(){
 }
 
 int main(){
-    //prefixVizsgalat();
+    // 1. feladat
+    // prefixVizsgalat();
+    // 2. feladat
     for (int i = 0; i < 5; i++)
     {
         kisbetubolNagybetu();
