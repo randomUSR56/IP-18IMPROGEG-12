@@ -46,7 +46,7 @@ int kisbetubolNagybetu(){
     }
 
     // kiiratas
-    printf("Eredeti input: %c\nModositott output: %c\n");
+    printf("Eredeti input: %c\nModositott output: %c\n", c, o);
     return 0;
 }
 
