@@ -113,6 +113,48 @@ int kor(){
     return 0;
 }
 
+int merolegesek(){
+    // ket egyenes akkor meroleges egymasra, amennyiben a meredekseguk szorzata -1
+    double x1, y1, x2, y2, x3, y3, x4, y4;
+    
+    printf("Elso egyenes elso pontja (x1, y1): ");
+    scanf("%lf %lf", &x1, &y1);
+    printf("Elso egyenes masodik pontja (x2, y2): ");
+    scanf("%lf %lf", &x2, &y2);
+    
+    printf("Masodik egyenes elso pontja (x3, y3): ");
+    scanf("%lf %lf", &x3, &y3);
+    printf("Masodik egyenes masodik pontja (x4, y4): ");
+    scanf("%lf %lf", &x4, &y4);
+    
+    double m1 = (y2 - y1) / (x2 - x1);
+    double m2 = (y4 - y3) / (x4 - x3);
+    
+    if (m1 * m2 == -1.0) {
+        printf("Az egyenesek merolegesek!\n");
+    } else {
+        printf("Az egyenesek nem merolegesek. m1*m2 = %.2f\n", m1 * m2);
+    }
+    
+    return 0;
+}
+
+int datumKonvert(){
+    int datum;
+    printf("adja meg a datumot (pl.: 20260323)\n");
+    scanf("%d", &datum);
+    int ev;
+    int honap;
+    int nap;
+
+    ev = datum/10000;
+    honap = 0;
+    nap = datum % 100;
+
+    printf("A datum formazva: %d. %d. %d.", ev, honap, nap);
+    return 0;
+}
+
 int main(){
     // 1. feladat
     prefixVizsgalat();
@@ -123,7 +165,9 @@ int main(){
     // 4. feladat
     kor();
     // 5. feladat
+
     // 6. feladat
+    merolegesek();
     // 7. feladat
     szamcsere();
     // 8. feladat
