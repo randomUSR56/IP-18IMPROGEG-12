@@ -28,7 +28,7 @@ int kisbetubolNagybetu(){
         // (ameddig nem esik megfelelo ascii tartomanyba az inputod)
         do
         {
-            printf("Adjon meg egy karaktert: ");
+            printf("Adjon meg egy karaktert: \n");
             c = getchar();
             if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
                 valid = 1;
@@ -89,6 +89,12 @@ int szamcsere(){
     return 0;
 }
 
+int negalas(){
+    unsigned int a = 4;
+    printf("A '4' szám ha megforditjuk (negaljuk) a bijeit: %d\n", ~a);
+    return 0;
+}
+
 int main(){
     // 1. feladat
     prefixVizsgalat();
@@ -96,7 +102,11 @@ int main(){
     kisbetubolNagybetu();
     // 3. feladat
     arithmethics();
+    // 4. feladat
+
     // 7. feladat
     szamcsere();
+    // 8. feladat
+    negalas();
     return 0;
 }
