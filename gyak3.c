@@ -52,6 +52,9 @@ int kisbetubolNagybetu(){
 
 int main(){
     //prefixVizsgalat();
-    kisbetubolNagybetu();
+    for (int i = 0; i < 5; i++)
+    {
+        kisbetubolNagybetu();
+    }
     return 0;
 }
