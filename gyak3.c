@@ -92,6 +92,8 @@ int main(){
     {
         kisbetubolNagybetu();
     }
+    // 3. feladat
+    arithmethics();
     // 7. feladat
     szamcsere();
     return 0;
