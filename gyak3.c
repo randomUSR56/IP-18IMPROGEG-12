@@ -103,10 +103,12 @@ int kor(){
     
     double terulet = M_PI * r * r;
     double kerulet = 2 * M_PI * r;
+    double atmero = 2*r;
     
     printf("A kor sugara: %.2f\n", r);
     printf("A kor terulete: %.2f\n", terulet);
     printf("A kor kerulete: %.2f\n", kerulet);
+    printf("A kor atmerejo: %.2f\n", atmero);
     
     return 0;
 }
