@@ -148,10 +148,10 @@ int datumKonvert(){
     int nap;
 
     ev = datum/10000;
-    honap = 0;
+    honap = (datum % 10000)/100;
     nap = datum % 100;
 
-    printf("A datum formazva: %d. %d. %d.", ev, honap, nap);
+    printf("A datum formazva: %d. %d. %d.\n", ev, honap, nap);
     return 0;
 }
 
@@ -165,7 +165,7 @@ int main(){
     // 4. feladat
     kor();
     // 5. feladat
-
+    datumKonvert();
     // 6. feladat
     merolegesek();
     // 7. feladat
