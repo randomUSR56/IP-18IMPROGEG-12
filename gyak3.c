@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int prefixVizsgalat(){
     int a = 1;
@@ -91,7 +92,22 @@ int szamcsere(){
 
 int negalas(){
     unsigned int a = 4;
-    printf("A '4' szám ha megforditjuk (negaljuk) a bijeit: %d\n", ~a);
+    printf("Az elojel nelkuli '4' szám ha megforditjuk (negaljuk) a bijeit: %u\n", ~a);
+    return 0;
+}
+
+int kor(){
+    double r = 0;
+    printf("Add meg a kor sugarat: \n");
+    scanf("%lf", &r);
+    
+    double terulet = M_PI * r * r;
+    double kerulet = 2 * M_PI * r;
+    
+    printf("A kor sugara: %.2f\n", r);
+    printf("A kor terulete: %.2f\n", terulet);
+    printf("A kor kerulete: %.2f\n", kerulet);
+    
     return 0;
 }
 
@@ -103,7 +119,9 @@ int main(){
     // 3. feladat
     arithmethics();
     // 4. feladat
-
+    kor();
+    // 5. feladat
+    // 6. feladat
     // 7. feladat
     szamcsere();
     // 8. feladat
