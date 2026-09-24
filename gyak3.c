@@ -47,7 +47,7 @@ int kisbetubolNagybetu(){
 
 int main(){
     // 1. feladat
-    // prefixVizsgalat();
+    prefixVizsgalat();
     // 2. feladat
     for (int i = 0; i < 5; i++)
     {
