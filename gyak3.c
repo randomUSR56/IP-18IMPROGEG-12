@@ -45,6 +45,24 @@ int kisbetubolNagybetu(){
     return 0;
 }
 
+int arithmethics(){
+    int a = 0;
+    int b = 0;
+
+    printf("adja meg az elso szamot\na = \n");
+    scanf("%d", &a);
+    printf("adja meg a masodik szamot\nb = \n");
+    scanf("%d", &b);
+
+    printf("Osszeadas (a+b):\t%d\n", a + b);
+    printf("Kivonas (a-b):\t%d\n", a - b);
+    printf("Szorzas (a*b):\t%d\n", a * b);
+    printf("Osztas (a/b):\t%d\n", a / b);
+    printf("Maradek (a%%b):\t%d\n", a % b);
+
+    return 0;
+}
+
 int main(){
     // 1. feladat
     prefixVizsgalat();
