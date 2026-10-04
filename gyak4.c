@@ -100,29 +100,29 @@ void opchain() {
     int a = 4;
     int b = 3;
     int c = 9;
-    int x = a<b<c;
-    printf("%d", x);
+    //int x = a<b<c;
+    //printf("%d\n", x);
 }
 
 int main() {
     // 4. feladat
     //leapyear();
-    leapyear2();
+    //leapyear2();
     //leapyear3();
 
     // 1. feladat
-    sizes();
+    //sizes();
 
     // 2. feladat
-    opchain();
+    //opchain();
 
     // 3.feladat
     int_decrement();
     //unsigned_int_decrement();
-    unsigned_int_decrement2();
+    //unsigned_int_decrement2();
 
     // 5. feladat
-    dice();
+    //dice();
 
     return 0;
 }
