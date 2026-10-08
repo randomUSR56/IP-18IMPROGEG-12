@@ -67,7 +67,7 @@ void int_max() {
 
 void char_abc() {
     char string[5] = "hello";
-    char string2[6] = "hellon";
+    char string2[5] = "bello";
     
     char *result = NULL;
     for (int i = 0; i < 5; i++) {
