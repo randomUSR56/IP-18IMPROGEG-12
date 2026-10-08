@@ -66,6 +66,7 @@ void int_max() {
 }
 
 void char_abc() {
+    // feltetelezi, hogy ugyanolyan hosszuak a viszgalt stringek
     char string[5] = "hello";
     char string2[5] = "bello";
     
