@@ -15,7 +15,7 @@ int osszead(int x, int y);
 //-------------------------------------------
 // [2]
 //-------------------------------------------
-void moricka() {
+void scope() {
     int b = 1;
     if (b)
     {
@@ -50,7 +50,7 @@ int main() {
     printf("a, valtozast kovetoen: %d\n", a);
 
     // printf("b: %d\n", b);
-    // b undefined, hiszen mainbol nem latunk ra. masik scope-ban van, a moricka lokalis valtozoja.
+    // b undefined, hiszen mainbol nem latunk ra. masik scope-ban van, a scope() lokalis valtozoja.
 
     //-------------------------------------------
     // [5]
@@ -62,7 +62,7 @@ int main() {
     // - olvashatosag: a valtozo kozel van ahhoz a kodhoz, ahol hasznaljuk
     // - eroforras: a blokk vegen a valtozok memoriaja felszabadul
     // - elkulonites: ideiglenes adatok nem szivarognak ki a kornyezetbe
-    // Szabaly: a valtozot mindig a lehet legszukebb scope-ban vezessuk be, globalist csak indokolt esetben.
+    // Szabaly: a valtozot mindig a leheto legszukebb scope-ban vezessuk be, globalist csak indokolt esetben.
 
     // Mi a verem (stack) es hogyan csatlakozik a scope kezeleshez?
     // - a verem LIFO (last in, first out) adatszerkezet: az utoljara betett elem kerul ki eloszor
@@ -71,7 +71,7 @@ int main() {
     // - a piramisnal: letrehozas a -> b -> c -> d -> e, megszunes e -> d -> c -> b -> a
     // - kifele azert latunk, mert a kulso valtozok lejjebb vannak a veremben es meg elnek;
     //   befele azert nem, mert a belso valtozok meg nem leteznek (vagy mar megszuntek)
-    // - main es moricka kulon frame, ezert nem latjuk egymas lokalis valtozoit
+    // - main es scope() kulon frame, ezert nem latjuk egymas lokalis valtozoit
     // - a globalis 'a' nem a veremben, hanem a statikus adatteruleten van, a program teljes futasa alatt el
 
     // Great Pyramid of Giza (of scopes)
