@@ -60,30 +60,12 @@ void countCharsAndWords(void)
     s[strcspn(s, "\n")] = '\0';
     printf("\nKarakterek száma: %zu\n", strlen(s));
 
-    char *start = s;
-    while (isspace((unsigned char)*start))
-    {
-        start++;
-    }
-
-    size_t len = strlen(start);
-    while (len > 0 && isspace((unsigned char)start[len - 1]))
-    {
-        len--;
-    }
-    start[len] = '\0';
-
     int word_count = 0;
-    if (len > 0)
+    for (size_t i = 0; s[i] != '\0'; i++)
     {
-        word_count = 1;
-        for (size_t i = 0; i < len; i++)
-        {
-            if (isspace((unsigned char)start[i]))
-            {
-                word_count++;
-            }
-        }
+        int starts_word = !isspace((unsigned char)s[i]) &&
+                          (i == 0 || isspace((unsigned char)s[i - 1]));
+        word_count += starts_word;
     }
 
     printf("Szavak száma: %d\n", word_count);
@@ -127,7 +109,7 @@ void swapCharInArrayAndPointerString(void)
     array[0] = 'A';
     printf("Tömb módosítás után: %s\n", array);
 
-    // pointer[0] = 'A'; // UB: a pointer a csak olvasható string literálra mutat (segfault)
+    // pointer[0] = 'A'; // a pointer a csak olvasható string literálra mutat (segfault)
     printf("Pointer (nem módosítható): %s\n", pointer);
 
     // A pointer átirányítható, a tömb neve nem.
