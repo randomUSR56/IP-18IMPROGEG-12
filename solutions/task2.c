@@ -9,7 +9,6 @@
 
 void task2(void)
 {
-    /* the pointer array is tiny and fixed; each word gets exactly its own size */
     char *words[NWORDS] = {NULL};
     int count = 0;
 
@@ -19,15 +18,15 @@ void task2(void)
     while (count < NWORDS && fgets(line, sizeof line, stdin) != NULL) {
         char *p = line;
         while (count < NWORDS) {
-            p += strspn(p, " \t\r\n");          /* skip whitespace before the word */
-            size_t len = strcspn(p, " \t\r\n"); /* length of the word */
+            p += strspn(p, " \t\r\n");
+            size_t len = strcspn(p, " \t\r\n");
             if (len == 0) {
-                break;                          /* no more words on this line */
+                break;
             }
 
             char *word = malloc(len + 1);
             if (word == NULL) {
-                fprintf(stderr, "Out of memory.\n");
+                perror("malloc");
                 break;
             }
             memcpy(word, p, len);

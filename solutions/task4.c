@@ -11,9 +11,8 @@ void reverse(char *str)
         return;
     }
 
-    /* swap from both ends until the indices meet; the middle char of an odd length stays */
-    size_t len = strlen(str);
-    for (size_t left = 0, right = len; left + 1 < right; ++left, --right) {
+    int len = strlen(str);
+    for (int left = 0, right = len; left + 1 < right; ++left, --right) {
         char tmp = str[left];
         str[left] = str[right - 1];
         str[right - 1] = tmp;
@@ -22,7 +21,7 @@ void reverse(char *str)
 
 void task4(void)
 {
-    /* char[] (not char *): needs writable memory, a literal pointer would crash */
+
     char buffer[MAX + 2];
 
     printf("Task 4 - enter a text: ");

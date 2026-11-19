@@ -12,17 +12,16 @@ char *reverse_new(const char *str)
         return NULL;
     }
 
-    size_t len = strlen(str);
+    int len = strlen(str);
     char *result = malloc(len + 1);
     if (result == NULL) {
         return NULL;
     }
 
-    /* const source is only read: result[i] gets the mirrored character */
-    for (size_t i = 0; i < len; ++i) {
+    for (int i = 0; i < len; ++i) {
         result[i] = str[len - 1 - i];
     }
-    result[len] = '\0'; /* malloc'ed memory is uninitialised, so terminate it */
+    result[len] = '\0';
     return result;
 }
 
@@ -38,7 +37,7 @@ void task5(void)
 
     char *reversed = reverse_new(buffer);
     if (reversed == NULL) {
-        fprintf(stderr, "Out of memory.\n");
+        perror("malloc");
         return;
     }
 
