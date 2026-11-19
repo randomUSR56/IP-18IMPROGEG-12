@@ -1,3 +1,4 @@
+// Build: cc -std=c99 -W -Wall -Wextra -pedantic -g -o gyak10.out gyak10.c solutions/task*.c
 #include "solutions/modules.h"
 
 int main(void)
