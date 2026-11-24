@@ -79,6 +79,5 @@ void pr( int address, unsigned char buffer[], int cnt)
     {
         putchar(isgraph(buffer[i]) ? buffer[i] : '.');
     }
-
     printf("|\n");
 }
