@@ -3,7 +3,7 @@
 #include <time.h>
 #include "main.h"
 
-#define STUD_CNT 10
+#define STUD_CNT 10 // fantazia-ertek
 
 /* 1. feladat: ket tomb (azonosito, atlag) feltoltese random adatokkal */
 static void init(int ids[], double averages[])
