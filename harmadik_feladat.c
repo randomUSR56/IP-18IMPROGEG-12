@@ -14,16 +14,16 @@ typedef enum
 
 typedef struct
 {
-    double impact_factor; // legmagasabb impaktfaktoru folyoirat impaktfaktora
+    double impact_factor;
     int erdos_number;
 } PhdData;
 
-// egyszerre mindig csak egy tag ervenyes, a tipus (Type) donti el, melyik
+// egyszerre mindig csak egy tag ervenyes, a Type donti el, melyik
 typedef union
 {
-    int courses;        // BSc: osszesen hallgatott kurzusok szama
-    double credit_idx;  // MSc: osszesitett korrigalt kreditindex
-    PhdData phd;        // PhD
+    int courses; // Bsc data
+    double credit_idx; // Msc data
+    PhdData phd;        // PhD data
 } Extra;
 
 typedef struct
@@ -35,7 +35,7 @@ typedef struct
     Extra extra;
 } AdvStudent;
 
-// ugyanez union helyett structtal, csak a memoriaigeny osszehasonlitasahoz
+// mi lenne ha struct-ot hasznalnank?
 typedef struct
 {
     int id;
