@@ -34,6 +34,8 @@ void elso_feladat(void)
     double averages[STUD_CNT];
     short ages[STUD_CNT];
 
+    printf("I. ---------------\n");
+
     init(ids, averages);
     printf("1. feladat:\n");
     for (int i = 0; i < STUD_CNT; i++)
